@@ -1216,24 +1216,41 @@
 
 <script>
 const products = [
-  { id:1, name:'iPhone 16 Pro Max', brand:'Apple', category:'phone', price:1199, oldPrice:1299, emoji:'📱', badge:'new', rating:4.9, reviews:2841, specs:['256GB','48MP','A18 Pro'], featured:true },
-  { id:2, name:'Samsung Galaxy S25 Ultra', brand:'Samsung', category:'phone', price:999, oldPrice:1199, emoji:'📱', badge:'sale', rating:4.8, reviews:1923, specs:['512GB','200MP','Snapdragon 8 Elite'] },
-  { id:3, name:'Google Pixel 9 Pro', brand:'Google', category:'phone', price:799, oldPrice:null, emoji:'📱', badge:'hot', rating:4.7, reviews:876, specs:['128GB','50MP','Tensor G4'], featured:true },
-  { id:4, name:'OnePlus 13', brand:'OnePlus', category:'phone', price:649, oldPrice:749, emoji:'📱', badge:'sale', rating:4.6, reviews:543, specs:['256GB','50MP','Snapdragon 8 Gen 3'] },
-  { id:5, name:'iPhone 15', brand:'Apple', category:'phone', price:699, oldPrice:799, emoji:'📱', badge:'sale', rating:4.7, reviews:3102, specs:['128GB','48MP','A16 Bionic'] },
-  { id:6, name:'Samsung Galaxy A55', brand:'Samsung', category:'phone', price:449, oldPrice:null, emoji:'📱', badge:'new', rating:4.5, reviews:421, specs:['128GB','50MP','Exynos 1480'] },
-  { id:7, name:'Xiaomi 14 Pro', brand:'Xiaomi', category:'phone', price:549, oldPrice:649, emoji:'📱', badge:'sale', rating:4.6, reviews:312, specs:['256GB','50MP','Snapdragon 8 Gen 3'] },
-  { id:8, name:'Nothing Phone 3', brand:'Nothing', category:'phone', price:499, oldPrice:null, emoji:'📱', badge:'new', rating:4.4, reviews:189, specs:['256GB','50MP','Snapdragon 8s Gen 3'] },
-  { id:9, name:'MacBook Pro 16" M4', brand:'Apple', category:'laptop', price:2499, oldPrice:2699, emoji:'💻', badge:'new', rating:4.9, reviews:1245, specs:['36GB RAM','1TB SSD','M4 Pro'], featured:true },
-  { id:10, name:'MacBook Air 13" M3', brand:'Apple', category:'laptop', price:1099, oldPrice:1199, emoji:'💻', badge:'sale', rating:4.8, reviews:2108, specs:['16GB RAM','512GB SSD','M3'] },
-  { id:11, name:'Dell XPS 15', brand:'Dell', category:'laptop', price:1799, oldPrice:1999, emoji:'💻', badge:'hot', rating:4.7, reviews:867, specs:['32GB RAM','1TB SSD','RTX 4060'], featured:true },
-  { id:12, name:'Lenovo ThinkPad X1 Carbon', brand:'Lenovo', category:'laptop', price:1499, oldPrice:1699, emoji:'💻', badge:'sale', rating:4.8, reviews:654, specs:['32GB RAM','1TB SSD','Intel Core Ultra 7'] },
-  { id:13, name:'ASUS ROG Zephyrus G16', brand:'ASUS', category:'laptop', price:1999, oldPrice:2299, emoji:'💻', badge:'hot', rating:4.8, reviews:432, specs:['32GB RAM','1TB SSD','RTX 4080'] },
-  { id:14, name:'Microsoft Surface Pro 10', brand:'Microsoft', category:'laptop', price:1299, oldPrice:null, emoji:'💻', badge:'new', rating:4.6, reviews:321, specs:['16GB RAM','512GB SSD','Intel Core Ultra 5'] },
-  { id:15, name:'HP Spectre x360 14"', brand:'HP', category:'laptop', price:1399, oldPrice:1599, emoji:'💻', badge:'sale', rating:4.6, reviews:278, specs:['16GB RAM','1TB SSD','Intel Core Ultra 7'] },
-  { id:16, name:'Razer Blade 16', brand:'Razer', category:'laptop', price:2799, oldPrice:2999, emoji:'💻', badge:'hot', rating:4.7, reviews:198, specs:['32GB RAM','2TB SSD','RTX 4090'] },
-  { id:17, name:'Samsung Galaxy Tab S9 Ultra', brand:'Samsung', category:'tablet', price:1099, oldPrice:1199, emoji:'📟', badge:'new', rating:4.7, reviews:521, specs:['512GB','Snapdragon 8 Gen 2','12GB RAM'] },
-  { id:18, name:'iPad Pro 13" M4', brand:'Apple', category:'tablet', price:1299, oldPrice:null, emoji:'📟', badge:'new', rating:4.9, reviews:892, specs:['256GB','WiFi + 5G','M4 chip'] },
+  { id:1, name:'iPhone 16 Pro Max', brand:'Apple', category:'phone', price:11990, oldPrice:12990, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-1.jpg', badge:'new', rating:4.9, reviews:2841, specs:['256GB','48MP','A18 Pro'], featured:true },
+
+  { id:2, name:'Samsung Galaxy S25 Ultra', brand:'Samsung', category:'phone', price:9990, oldPrice:11990, emoji:'📱', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStM2N-ayftQwBxMIV0-hjNTCiCTewiSNxPSP9Ls_UwUg&s=10', badge:'sale', rating:4.8, reviews:1923, specs:['512GB','200MP','Snapdragon 8 Elite'] },
+
+  { id:3, name:'Google Pixel 9 Pro', brand:'Google', category:'phone', price:7990, oldPrice:null, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/google/google-pixel-9-pro-1.jpg', badge:'hot', rating:4.7, reviews:876, specs:['128GB','50MP','Tensor G4'], featured:true },
+
+  { id:4, name:'OnePlus 13', brand:'OnePlus', category:'phone', price:6490, oldPrice:7490, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-13-1.jpg', badge:'sale', rating:4.6, reviews:543, specs:['256GB','50MP','Snapdragon 8 Gen 3'] },
+
+  { id:5, name:'iPhone 15', brand:'Apple', category:'phone', price:6990, oldPrice:7990, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg', badge:'sale', rating:4.7, reviews:3102, specs:['128GB','48MP','A16 Bionic'] },
+
+  { id:6, name:'Samsung Galaxy A55', brand:'Samsung', category:'phone', price:5900, oldPrice:null, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a55-1.jpg', badge:'new', rating:4.5, reviews:421, specs:['128GB','50MP','Exynos 1480'] },
+
+  { id:7, name:'Xiaomi 14 Pro', brand:'Xiaomi', category:'phone', price:6205, oldPrice:7340, emoji:'📱', image:'https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-14-pro-1.jpg', badge:'sale', rating:4.6, reviews:312, specs:['256GB','50MP','Snapdragon 8 Gen 3'] },
+
+  { id:8, name:'Nothing Phone 3', brand:'Nothing', category:'phone', price:4990, oldPrice:null, emoji:'📱', image:'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRAPkdyoRy9RciJ6Srt78Xcpl5ZJKCbbiGzAgVp_1uCannEKtQr_ByU5OW2pvqfGjvbzAVoOXMCIjKifGQ4gTRt3EVGTMwiCtsKhmFyrvXeDb1J4t84k3TXrg&usqp=CAc', badge:'new', rating:4.4, reviews:189, specs:['256GB','50MP','Snapdragon 8s Gen 3'] },
+
+  { id:9, name:'MacBook Pro 16" M4', brand:'Apple', category:'laptop', price:24990, oldPrice:26990, emoji:'💻', image:'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSR0xjsfYP46fTnIUtcwpYQ-dpzNwbYCz5FPYBU9XOTqJJ-vLZZAnKfQZ0a7xZ0t986oDNX5KqWO_9X9rVzTqh89qD-vg41j8cTb3ek_d15x5Y0V8XSsxQi&usqp=CAc', badge:'new', rating:4.9, reviews:1245, specs:['36GB RAM','1TB SSD','M4 Pro'], featured:true },
+
+  { id:10, name:'MacBook Air 13" M3', brand:'Apple', category:'laptop', price:10990, oldPrice:11990, emoji:'💻', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt22y2y_X6OjGzX_mEtoGD_nWFjAys0w35kQ7-SLXEfA&s=10', badge:'sale', rating:4.8, reviews:2108, specs:['16GB RAM','512GB SSD','M3'] },
+
+  { id:11, name:'Dell XPS 15', brand:'Dell', category:'laptop', price:17990, oldPrice:19990, emoji:'💻', image:'https://i.ebayimg.com/images/g/HtkAAeSwcRJqLG7p/s-l500.jpg', badge:'hot', rating:4.7, reviews:867, specs:['32GB RAM','1TB SSD','RTX 4060'], featured:true },
+
+  { id:12, name:'Lenovo ThinkPad X1 Carbon', brand:'Lenovo', category:'laptop', price:14990, oldPrice:16990, emoji:'💻', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKvKf8Yp2BvYpQ_EbhhPUf6WO6aU_Y7ynlNQ6MSLpdgA&s=10', badge:'sale', rating:4.8, reviews:654, specs:['32GB RAM','1TB SSD','Intel Core Ultra 7'] },
+
+  { id:13, name:'ASUS ROG Zephyrus G16', brand:'ASUS', category:'laptop', price:1999, oldPrice:2299, emoji:'💻', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4h0YE5HYF14FCdYQr5pA9TMQM9FnG9A2hcb9TPNt37w&s=10', badge:'hot', rating:4.8, reviews:432, specs:['32GB RAM','1TB SSD','RTX 4080'] },
+
+  { id:14, name:'Microsoft Surface Pro 10', brand:'Microsoft', category:'laptop', price:12990, oldPrice:null, emoji:'💻', image:'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSISJ9KZArf4VTnS71krCQ2ETX_sgn1oDEDk-ISwNc8HeIhnRazforKVOKvpErbRF9ov_HyZ_-xYn9lZyuTnjRn-9RKpbjnjq6V9e1u7RViY2Qa8c4q_y2M&usqp=CAc', badge:'new', rating:4.6, reviews:321, specs:['16GB RAM','512GB SSD','Intel Core Ultra 5'] },
+
+  { id:15, name:'HP Spectre x360 14"', brand:'HP', category:'laptop', price:13990, oldPrice:15990, emoji:'💻', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReTx_oImO15LBubKD8-uz4Wp3kuCTk_3vHluPRB1x8sQ&s=10', badge:'sale', rating:4.6, reviews:278, specs:['16GB RAM','1TB SSD','Intel Core Ultra 7'] },
+
+  { id:16, name:'Razer Blade 16', brand:'Razer', category:'laptop', price:27990, oldPrice:29990, emoji:'💻', image:'https://i.ebayimg.com/images/g/HZoAAOSwailnBsSS/s-l1600.jpg', badge:'hot', rating:4.7, reviews:198, specs:['32GB RAM','2TB SSD','RTX 4090'] },
+
+  { id:17, name:'Samsung Galaxy Tab S9 Ultra', brand:'Samsung', category:'tablet', price:10990, oldPrice:11990, emoji:'📟', image:'https://www.leronza.com/wp-content/uploads/2024/08/Luxury-24KT-Gold-Samsung-Galaxy-Tab-Ultra.webp', badge:'new', rating:4.7, reviews:521, specs:['512GB','Snapdragon 8 Gen 2','12GB RAM'] },
+
+  { id:18, name:'iPad Pro 13" M4', brand:'Apple', category:'tablet', price:12990, oldPrice:null, emoji:'📟', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcTKwNRl5oyMux9a7NNTVhaXALaAhdURPR_quSYgg7LQ&s=10', badge:'new', rating:4.9, reviews:892, specs:['256GB','WiFi + 5G','M4 chip'] },
 ];
 
 let cart = [];
@@ -1280,8 +1297,9 @@ function renderProducts(list) {
     <div class="product-card" onclick="viewProduct(${p.id})">
       ${p.badge ? `<span class="product-badge badge-${p.badge}">${p.badge}</span>` : ''}
       <button class="wishlist-btn${isWished ? ' active' : ''}" onclick="toggleWishlist(event,${p.id})" title="Add to wishlist">${isWished ? '❤️' : '🤍'}</button>
-      <div class="product-img">${p.emoji}</div>
-      <div class="product-info">
+<div class="product-img"><img src="${p.image}"
+style="width:140px;height:140px;object-fit:contain;" onerror="this.style.display='none';this.parentElement.innerHTML='${p.emoji}';this.parentElement.style.fontSize='5rem';"></div>
+           <div class="product-info">
         <div class="product-brand">${p.brand}</div>
         <div class="product-name">${p.name}</div>
         <div class="product-specs">
@@ -1293,8 +1311,8 @@ function renderProducts(list) {
         </div>
         <div class="product-footer">
           <div class="price-block">
-            ${p.oldPrice ? `<div class="price-old">$${p.oldPrice.toLocaleString()}</div>` : ''}
-            <div class="price-new">$${p.price.toLocaleString()}</div>
+            ${p.oldPrice ? `<div class="price-old">GH₵${p.oldPrice.toLocaleString()}</div>` : ''}
+            <div class="price-new">GH₵${p.price.toLocaleString()}</div>
           </div>
           <button class="add-cart-btn" onclick="addToCart(event,${p.id})">+ Add to cart</button>
         </div>
@@ -1366,7 +1384,7 @@ function updateCartUI() {
   `).join('');
 
   const grandTotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
-  document.getElementById('cartTotal').textContent = '$' + grandTotal.toLocaleString();
+  document.getElementById('cartTotal').textContent = 'GH₵' + grandTotal.toLocaleString();
 }
 
 function changeQty(id, delta) {
